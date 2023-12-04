@@ -17,7 +17,9 @@ namespace KlassWork
             // введённых букв гласных.
             System.Console.Write("Input word => ");
             string ? str = System.Console.ReadLine();
+#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
             char [] word = CreateChar(str);
+#pragma warning restore CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
             char [] item = {'e','y','u','i','o','a'};
             int count = FindCountItem(word, item);
             System.Console.WriteLine($"Count of vowels => {count}");
